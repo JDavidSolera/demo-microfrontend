@@ -1,0 +1,10 @@
+export { default as Button } from "./Button";
+export { default as Text } from "./Text";
+export { default as Container } from "./Container";
+export { default as Modal } from "./Modal";
+export { default as Card } from "./Card";
+export { default as Slider } from "./Slider";
+export { default as Slide } from "./Slider/Slide";
+export { default as Tag } from "./Tag";
+export { default as Box } from "./Box";
+export { default as Alert } from "./Alert";

@@ -1,0 +1,9 @@
+{
+  "extends": "@phoenix/tsconfig/react-library.json",
+  "include": ["."],
+  "compilerOptions": {
+    "typeRoots": ["./src/types"],
+    "allowJs": true
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}

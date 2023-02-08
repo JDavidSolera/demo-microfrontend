@@ -1,0 +1,34 @@
+{
+  "name": "mfe-order",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 8001",
+    "build": "next build",
+    "start": "next start --port 8001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "^6.0.7",
+    "@next/font": "13.1.6",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6",
+    "styled-system": "^5.1.5",
+    "@phoenix/hooks": "*",
+    "@phoenix/design-system": "*",
+    "@phoenix/core": "*",
+    "@phoenix/utils": "*"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-system": "^5.1.16",
+    "eslint": "^8.16.0",
+    "eslint-config-phoenix": "*",
+    "typescript": "4.9.5"
+  }
+}

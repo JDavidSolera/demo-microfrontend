@@ -1,0 +1,26 @@
+{
+  "name": "demo-microfrontend",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "microfrontends/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+  },
+  "devDependencies": {
+    "eslint-config-phoenix": "*",
+    "prettier": "^2.8.3",
+    "turbo": "latest",
+    "webpack": "^5.75.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "npm@8.1.2"
+}
