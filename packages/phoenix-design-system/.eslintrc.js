@@ -1,4 +1,4 @@
 module.exports = {
-    root: true,
-    extends: ["phoenix"],
-}
+  root: true,
+  extends: ["phoenix"],
+};

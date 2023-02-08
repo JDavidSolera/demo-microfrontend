@@ -10,7 +10,7 @@ function Button({
   ...props
 }: ButtonProps): JSX.Element {
   return (
-    <S.Container {...props}>
+    <S.Container as={as} {...props}>
       {iconLeft && cloneElement(iconLeft, { style: { fontSize: "1em" } })}
       {label}
       {iconRight && cloneElement(iconRight, { style: { fontSize: "1em" } })}

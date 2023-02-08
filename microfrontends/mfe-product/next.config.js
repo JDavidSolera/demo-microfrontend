@@ -1,31 +1,31 @@
-const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
+const { NextFederationPlugin } = require("@module-federation/nextjs-mf");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: [
-    '@phoenix/design-system',
-    '@phoenix/core',
-    '@phoenix/utils',
-    '@phoenix/hooks',
+    "@phoenix/design-system",
+    "@phoenix/core",
+    "@phoenix/utils",
+    "@phoenix/hooks",
   ],
   compiler: {
-    styledComponents: true
+    styledComponents: true,
   },
   images: {
-    domains: ['catalogo.movistar.com.pe']
+    domains: ["catalogo.movistar.com.pe"],
   },
   webpack: (config) => {
     config.experiments = { topLevelAwait: true };
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'mfe_product',
-        filename: 'static/chunks/mfe-product.js',
+        name: "mfe_product",
+        filename: "static/chunks/mfe-product.js",
         exposes: {
-          './ExampleComponent': './src/components/ExampleComponent/index.tsx'
+          "./ExampleComponent": "./src/components/ExampleComponent/index.tsx",
         },
         extraOptions: {
-          exposePages: true
+          exposePages: true,
         },
         shared: {
           "next/dynamic": {
@@ -52,12 +52,12 @@ const nextConfig = {
             requiredVersion: false,
             singleton: true,
           },
-        }
-      }),
-    )
+        },
+      })
+    );
 
-    return config
+    return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
