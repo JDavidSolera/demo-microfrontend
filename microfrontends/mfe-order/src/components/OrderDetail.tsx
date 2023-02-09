@@ -8,10 +8,10 @@ import {
   ChevronLeft,
 } from "@phoenix/design-system";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { AppOrderThemeProvider } from "@/theme";
 
-export default function Home() {
+export default function OrderDetail() {
   return (
     <AppOrderThemeProvider>
       <Container>
@@ -23,7 +23,7 @@ export default function Home() {
           $size="sm"
           $variant="text"
           href="/"
-          as={Link}
+          as="a"
         />
         <Card $elevation={false} mb={2}>
           <Text color="primary" textAlign="center" mb={3}>
@@ -96,9 +96,9 @@ export default function Home() {
         >
           <input type="checkbox" />
           <Text color="gray-3" as="i" $size="Body4" ml={3}>
-            Acepto <Link href="/">términos y condiciones de uso</Link> del
+            Acepto <a href="/">términos y condiciones de uso</a> del
             producto y el{" "}
-            <Link href="/">tratamiento de mis datos personales</Link>
+            <a href="/">tratamiento de mis datos personales</a>
           </Text>
         </Card>
         <Button label="Confirmar pedido" $variant="success" width="100%" />
