@@ -1,7 +1,14 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Button, Batery, Cloud, Reload, ChevronRight, ChevronLeft, DesignSystemProvider } from "@phoenix/design-system";
 
-import { Button, DesignSystemProvider } from "@phoenix/design-system";
+const iconsMap = {
+  Batery,
+  Cloud,
+  Reload,
+  ChevronRight,
+  ChevronLeft,
+}
 
 export default {
   title: "Design System/Button",
@@ -13,13 +20,15 @@ export default {
       }
     },
     iconLeft: {
-      table: {
-        disable: true
+      control: {
+        type: 'select',
+        options: [undefined, ...Object.keys(iconsMap)]
       }
     },
     iconRight: {
-      table: {
-        disable: true
+      control: {
+        type: 'select',
+        options: [undefined, ...Object.keys(iconsMap)]
       }
     }
   },
@@ -32,7 +41,12 @@ export default {
   ]
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = ({ iconRight, iconLeft, ...args }) => {
+  const Right = iconsMap[iconRight]
+  const Left = iconsMap[iconLeft]
+
+  return <Button iconLeft={iconLeft && <Left />} iconRight={iconRight && <Right />} {...args} />
+};
 
 export const BasicButton = Template.bind({});
 
