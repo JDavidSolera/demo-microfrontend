@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { ButtonSize } from "../Button.types";
+import { ButtonSize } from "../ButtonTypes";
 
 const getSize = ({ size = "md" }: { size?: ButtonSize }) =>
   ({

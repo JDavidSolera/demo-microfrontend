@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 import { mediaQueries } from "../../utils";
-import type { Bodies, Captions, Subtitles, Titles } from "./text.types";
+import type { Bodies, Captions, Subtitles, Titles } from "./TextTypes";
 
 const mediaDevice = mediaQueries.Laptop;
 

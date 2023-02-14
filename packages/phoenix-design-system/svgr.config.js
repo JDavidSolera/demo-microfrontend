@@ -1,14 +1,14 @@
 module.exports = {
-    icon: true,
-    titleProp: true,
-    expandProps: true,
-    replaceAttrValues: { 
-        "#86888C": "currentColor"
-    },
-    typescript: true,
-    ref: true,
-    ignoreExisting: true,
-    template: (variables, { tpl }) => tpl`
+  icon: true,
+  titleProp: true,
+  expandProps: true,
+  replaceAttrValues: {
+    "#86888C": "currentColor",
+  },
+  typescript: true,
+  ref: true,
+  ignoreExisting: true,
+  template: (variables, { tpl }) => tpl`
         ${variables.imports};${"\n"}
         ${"\n"}
         ${variables.interfaces};${"\n"}
@@ -20,5 +20,5 @@ module.exports = {
         }${"\n"}
         ${"\n"}
         ${variables.exports};
-      `
-}
+      `,
+};

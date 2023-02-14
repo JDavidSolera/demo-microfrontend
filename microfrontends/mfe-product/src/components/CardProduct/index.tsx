@@ -1,6 +1,5 @@
 import { Button, Tag, Text, ChevronRight } from "@phoenix/design-system";
 import Image from "next/image";
-import Link from "next/link";
 import S from "./CardProduct.styled";
 
 function CardProduct({ handleViewDetail }: { handleViewDetail: () => void }) {
@@ -48,7 +47,7 @@ function CardProduct({ handleViewDetail }: { handleViewDetail: () => void }) {
           </S.ButtonDetail>
         </S.Info>
         <Button
-          as={Link}
+          as={'a'}
           href="/order"
           label="Lo quiero"
           $variant="success"

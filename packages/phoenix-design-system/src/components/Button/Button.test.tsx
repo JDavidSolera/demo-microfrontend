@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Button from ".";
+import Button from "./Button";
 import { DesignSystemProvider } from "../../provider";
 
 describe("UI / Button Component", () => {

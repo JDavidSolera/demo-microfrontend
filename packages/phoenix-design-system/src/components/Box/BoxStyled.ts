@@ -7,14 +7,14 @@ import {
   flexbox,
   border,
 } from "styled-system";
-import { BoxStyledProps } from "./Box.types";
+import type { BoxStyledProps } from "./BoxTypes";
 
 const Box = styled.div<BoxStyledProps>`
   ${typography}
   ${space}
-    ${color}
-    ${layout}
-    ${flexbox}
-    ${border}
+  ${color}
+  ${layout}
+  ${flexbox}
+  ${border}
 `;
 export default Box;

@@ -1,10 +1,5 @@
 module.exports = {
-  extends: [
-    "next",
-    "turbo",
-    "airbnb",
-    "prettier"
-  ],
+  extends: ["next", "turbo", "airbnb", "prettier"],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
@@ -15,6 +10,6 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/require-default-props": "off"
-  }
+    "react/require-default-props": "off",
+  },
 };

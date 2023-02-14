@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { ButtonVariant } from "../Button.types";
+import { ButtonVariant } from "../ButtonTypes";
 
 const getVariant = ({ variant = "primary" }: { variant?: ButtonVariant }) =>
   ({

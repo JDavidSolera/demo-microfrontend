@@ -7,9 +7,9 @@ import {
   space,
   typography,
 } from "styled-system";
-import type { CardStyledProps } from "./Card.types";
+import type { CardStyledProps } from "./CardTypes";
 
-const Card = styled.div<CardStyledProps>`
+const CardStyled = styled.div<CardStyledProps>`
   background: white;
   border-radius: 1rem;
   padding: 1rem;
@@ -26,4 +26,4 @@ const Card = styled.div<CardStyledProps>`
   ${border}
 `;
 
-export default Card;
+export default CardStyled;

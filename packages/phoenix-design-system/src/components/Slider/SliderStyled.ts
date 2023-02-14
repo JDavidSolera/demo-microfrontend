@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { layout, space } from "styled-system";
 import { Swiper } from "swiper/react";
-import type { SliderStyledProps } from "./Slider.types";
+import type { SliderStyledProps } from "./SliderTypes";
 
 const Container = styled(Swiper)<SliderStyledProps>`
   ${space}
