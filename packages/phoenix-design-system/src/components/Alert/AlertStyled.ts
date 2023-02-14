@@ -1,6 +1,6 @@
 import { rgba } from "polished";
 import styled, { css } from "styled-components";
-import { AlertStyledProps } from "./Alert.types";
+import type { AlertStyledProps } from "./AlertTypes";
 
 const Background = styled.div<AlertStyledProps>`
   font-size: 12px;
@@ -25,9 +25,7 @@ const Icon = styled.div`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-const AlertStyled = {
+export default {
   Background,
-  Icon,
-};
-
-export default AlertStyled;
+  Icon
+}

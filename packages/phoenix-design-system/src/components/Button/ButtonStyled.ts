@@ -1,12 +1,12 @@
 import buttonMixin from "../../mixins/buttonMixin";
 import styled from "styled-components";
 import { layout, space } from "styled-system";
-import type { ButtonStyledProps } from "./Button.types";
+import type { ButtonStyledProps } from "./ButtonTypes";
 import commonStyles from "./utils/commonStyles";
 import getSize from "./utils/getSize";
 import getVariant from "./utils/getVariant";
 
-const Container = styled.button<ButtonStyledProps>`
+const ButtonStyled = styled.button<ButtonStyledProps>`
   // base styles
   ${buttonMixin}
   ${commonStyles}
@@ -25,6 +25,4 @@ const Container = styled.button<ButtonStyledProps>`
   ${layout}
 `;
 
-export default {
-  Container,
-};
+export default ButtonStyled;

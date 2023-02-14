@@ -1,8 +1,8 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/thumbs";
-import S from "./Slider.styled";
-import type { SliderProps } from "./Slider.types";
+import S from "./SliderStyled";
+import type { SliderProps } from "./SliderTypes";
 import { Pagination, Thumbs } from "swiper";
 
 function Slider({ options, children, ...rest }: SliderProps) {

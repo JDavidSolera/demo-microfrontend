@@ -1,6 +1,6 @@
 // import { MovistarIcon, Reload, Settings, Warning } from '@Icon';
-import S from "./Modal.styled";
-import { ModalProps, ModalType } from "./Modal.types";
+import S from "./ModalStyled";
+import { ModalProps, ModalType } from "./ModalTypes";
 
 // function renderModalIcon (type: ModalType) {
 //     return ({

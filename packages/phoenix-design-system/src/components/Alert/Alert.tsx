@@ -1,5 +1,5 @@
-import type { AlertProps } from "./Alert.types";
-import S from "./Alert.styled";
+import type { AlertProps } from "./AlertTypes";
+import S from "./AlertStyled";
 import { Mobile } from "../../icons";
 
 function Alert({ children, $type, ...props }: AlertProps) {

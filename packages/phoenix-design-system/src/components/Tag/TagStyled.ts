@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { layout, space, typography } from "styled-system";
-import type { TagStyledProps } from "./Tag.type";
+import type { TagStyledProps } from "./TagTypes";
 
-const Tag = styled.div<TagStyledProps>`
+const Wrapper = styled.div<TagStyledProps>`
   display: inline-block;
   padding: 2px 8px;
   background: #e6f5fd;
@@ -16,4 +16,8 @@ const Tag = styled.div<TagStyledProps>`
   ${typography}
 `;
 
-export default Tag;
+const TagStyled = {
+  Wrapper
+}
+
+export default TagStyled

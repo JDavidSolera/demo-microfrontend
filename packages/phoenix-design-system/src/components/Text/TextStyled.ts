@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space, typography, color, layout } from "styled-system";
-import type { TextProps } from "./text.types";
+import type { TextProps } from "./TextTypes";
 import getVariant from "./getVariant";
 
 const Text = styled.p<TextProps>`

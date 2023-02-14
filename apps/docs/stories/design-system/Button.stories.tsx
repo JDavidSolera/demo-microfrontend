@@ -1,68 +1,58 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button, Batery, Cloud, Reload, ChevronRight, ChevronLeft, DesignSystemProvider } from "@phoenix/design-system";
+import React from 'react'
+import { Button, DesignSystemProvider, ButtonProps } from '@phoenix/design-system'
+import { ComponentMeta, ComponentStory, Meta } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { iconControl, iconsMap } from '../utils/icons'
 
-const iconsMap = {
-  Batery,
-  Cloud,
-  Reload,
-  ChevronRight,
-  ChevronLeft,
-}
-
-export default {
+const meta: Meta<ButtonProps> = {
   title: "Design System/Button",
   component: Button,
   argTypes: {
+    label: {
+      defaultValue: 'Button',
+    },
     as: {
-      table: {
-        disable: true
+      control: {
+        type: 'select',
+        options: [undefined, 'button', 'a']
       }
+    },
+    href: {
+      defaultValue: 'http://example.com',
+      if: { arg: 'as', eq: 'a' }
     },
     iconLeft: {
-      control: {
-        type: 'select',
-        options: [undefined, ...Object.keys(iconsMap)]
-      }
+      control: iconControl
     },
     iconRight: {
+      control: iconControl
+    },
+    disabled: {
+      defaultValue: false,
       control: {
-        type: 'select',
-        options: [undefined, ...Object.keys(iconsMap)]
+        type: 'boolean',
       }
-    }
+    },
   },
-  decorators: [
-    (Story) => (
-      <DesignSystemProvider>
-        {Story()}
-      </DesignSystemProvider>
-    )
-  ]
-} as ComponentMeta<typeof Button>;
-
-const Template: ComponentStory<typeof Button> = ({ iconRight, iconLeft, ...args }) => {
-  const Right = iconsMap[iconRight]
-  const Left = iconsMap[iconLeft]
-
-  return <Button iconLeft={iconLeft && <Left />} iconRight={iconRight && <Right />} {...args} />
-};
-
-export const BasicButton = Template.bind({});
-
-BasicButton.args = {
-  label: "Button",
-  $variant: "primary",
-};
-
-export const IconButton = Template.bind({})
-
-IconButton.args = {
-  label: "Button",
 }
 
-export const LoadingButton = Template.bind({})
+const ButtonStorybook: ComponentStory<typeof Button> = ({iconRight, iconLeft, ...props}) => {
+  const Right = iconRight && iconsMap[String(iconRight)]
+  const Left = iconLeft && iconsMap[String(iconLeft)]
 
-LoadingButton.args = {
-  label: "Fetch data",
+  return (
+  <Button 
+    iconLeft={iconLeft && <Left />} 
+    iconRight={iconRight && <Right />}
+    onClick={action('Clicked')}
+    {...props}
+  />
+  )
 }
+
+export const ButtonBase = ButtonStorybook.bind({})
+
+ButtonBase.args = {
+};
+
+export default meta

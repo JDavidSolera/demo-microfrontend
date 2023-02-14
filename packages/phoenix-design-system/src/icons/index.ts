@@ -17,3 +17,4 @@ export { default as Reload } from "./Reload";
 export { default as SettingsBold } from "./SettingsBold";
 export { default as SettingsLight } from "./SettingsLight";
 export { default as Settings } from "./Settings";
+export { default as SpinnerLitte } from "./SpinnerLitte";

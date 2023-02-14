@@ -25,6 +25,7 @@ export type ButtonCommonProps = ButtonStyledProps & {
   label: string;
   iconLeft?: JSX.Element;
   iconRight?: JSX.Element;
+  isLoading?: boolean
 };
 
 export type ButtonProps = ButtonCommonProps &

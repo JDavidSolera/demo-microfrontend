@@ -1,7 +1,7 @@
 import { rgba } from "polished";
 import styled from "styled-components";
 import { layout, space } from "styled-system";
-import type { ModalType } from "./Modal.types";
+import type { ModalType } from "./ModalTypes";
 
 const Overlay = styled.div`
   position: absolute;
